@@ -19,7 +19,7 @@
 
 # Basic configuration
 PLATFORM = "xhs"  # Platform, xhs | dy | ks | bili | wb | tieba | zhihu
-KEYWORDS = "香港诈骗"  # Keyword search configuration, separated by English commas
+KEYWORDS = "香港whatsapp电话诈骗"  # Keyword search configuration, separated by English commas
 LOGIN_TYPE = "qrcode"  # qrcode or phone or cookie
 COOKIES = ""
 CRAWLER_TYPE = (
@@ -64,14 +64,14 @@ CUSTOM_BROWSER_PATH = ""
 CDP_HEADLESS = False
 
 # Browser startup timeout (seconds)
-BROWSER_LAUNCH_TIMEOUT = 60
+BROWSER_LAUNCH_TIMEOUT = 9999
 
 # Whether to automatically close the browser when the program ends
 # Set to False to keep the browser running for easy debugging
 AUTO_CLOSE_BROWSER = True
 
 # Data saving type option configuration, supports: csv, db, json, jsonl, sqlite, excel, postgres. It is best to save to DB, with deduplication function.
-SAVE_DATA_OPTION = "jsonl"  # csv or db or json or jsonl or sqlite or excel or postgres
+SAVE_DATA_OPTION = "json"  # csv or db or json or jsonl or sqlite or excel or postgres
 
 # Data saving path, if not specified by default, it will be saved to the data folder.
 SAVE_DATA_PATH = ""
@@ -83,16 +83,16 @@ USER_DATA_DIR = "%s_user_data_dir"  # %s will be replaced by platform name
 START_PAGE = 1
 
 # Control the number of crawled videos/posts
-CRAWLER_MAX_NOTES_COUNT = 15
+CRAWLER_MAX_NOTES_COUNT = 1000
 
 # Controlling the number of concurrent crawlers
 MAX_CONCURRENCY_NUM = 1
 
 # Whether to enable crawling media mode (including image or video resources), crawling media is not enabled by default
-ENABLE_GET_MEIDAS = False
+ENABLE_GET_MEIDAS = True
 
 # Whether to enable comment crawling mode. Comment crawling is enabled by default.
-ENABLE_GET_COMMENTS = True
+ENABLE_GET_COMMENTS = False
 
 # Control the number of crawled first-level comments (single video/post)
 CRAWLER_MAX_COMMENTS_COUNT_SINGLENOTES = 10
